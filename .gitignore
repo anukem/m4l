@@ -1,3 +1,6 @@
 
+src/tlc/
+src/Lib/
+src/Scripts/
 *.pyc
 *.exe
