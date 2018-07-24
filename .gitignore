@@ -1,5 +1,6 @@
-
-src/tlc/
+src/pip-selfcheck.json
+src/Include
+src/tcl/
 src/Lib/
 src/Scripts/
 *.pyc
