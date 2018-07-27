@@ -7,17 +7,11 @@ doctype html
       p New at Microsoft? Looking to make friends in the office? Still don't know that one person's name even though you see each other every day?
       
 
-      div Time?
-        select (form="main_form")
-      	  option: -for op in ["12:00", "12:30", "1:00", "1:30", "2:00", "2:30"]: option: value = op
-      div Where to Meet?
-        select (form="main_form")
-          option: -for op in ["Commons", "SubMixer", "Studio H", "Studio A"]: option: value = op
-      div Where to Eat?
-          select (form="main_form")
-            option: -for op in ["Commons", "SubMixer", "Studio H", "Studio A"]: option: value = op
-      form (id="main_form")
-        input (type="submit" value="Lunch Time!") 
-
-
-      
+      h4 Let's get you fed
+      form (method="post")
+        -for thing in form
+          -unless "csrf" in thing.name or thing.name == "submit"
+            = thing.label
+            = thing
+        br
+        = form.submit
